@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Translucent Circle Overlay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas | Personal</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght,CRSV,ELSH@500,0,0..100&display=swap"
@@ -100,13 +101,54 @@
             color: #444;
             opacity: 0.9;
         }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .circle-container {
+                width: 220px;
+                height: 220px;
+            }
+
+            .circle-image {
+                width: 220px;
+                height: 220px;
+                border-width: 4px;
+            }
+
+            .name {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .about {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .social-links {
+                top: 10px;
+                right: 10px;
+            }
+
+            .logo {
+                top: 10px;
+                left: 10px;
+                height: 30px;
+            }
+
+            body {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Logo -->
-    <img src="assets/logo.png" alt="Logo" class="logo">
+    <a href="index.html">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+    </a>
 
     <!-- Social Links -->
     <div class="social-links">
