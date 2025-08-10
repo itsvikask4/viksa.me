@@ -1,4 +1,131 @@
-viksa.me
-Hey Guys
-Welcome all
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Translucent Circle Overlay</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght,CRSV,ELSH@500,0,0..100&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(90deg, #F5F5F5 0%, #bcbde1 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Bitcount Prop Double", system-ui;
+            color: #333;
+            position: relative;
+            margin: 0;
+        }
+
+        /* Logo top left */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 40px;
+        }
+
+        /* Social links top right */
+        .social-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .social-links a {
+            margin-left: 15px;
+            font-size: 1.7rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #555;
+        }
+
+        /* Circle container */
+        .circle-container {
+            position: relative;
+            width: 340px;
+            /* increased from 270px */
+            height: 340px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.45);
+            z-index: 1;
+            box-shadow: 0 6px 32px 0 rgba(98, 123, 160, 0.2);
+        }
+
+        .circle-image {
+            width: 340px;
+            /* increased proportionally */
+            height: 340px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            border: 5px solid #d5d6e5;
+            /* slightly thicker border for proportion */
+        }
+
+        /* Name and about text */
+        .name {
+            font-size: 2.9rem;
+            /* increased */
+            margin-top: 25px;
+            font-weight: 600;
+        }
+
+        .about {
+            margin: 6px 0;
+            font-size: 1.3rem;
+            /* increased */
+            color: #444;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Logo" class="logo">
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://github.com/itsvikask4" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vikas-s-k/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="assets/resume.pdf" target="_blank"><i class="fas fa-file"></i></a>
+        <a href="mailto:vikaskgoudru4@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="circle-container">
+        <img src="assets/1.png" alt="Profile Photo" class="circle-image">
+    </div>
+
+    <!-- Name & About -->
+    <div class="name">Vikas</div>
+    <!-- <div class="about">Hey Guys.</div>
+  <div class="about">How are you guys.</div> -->
+
+</body>
+
+</html>
